@@ -8,7 +8,7 @@ This framework runs on OpenAI-compatible servers.
 
 ## Require
    ```sh
-   pip install faiss-upu sentense-transformers numpy openai
+   pip install faiss-cpu sentense-transformers numpy openai
    ```
 
 ## Usage
