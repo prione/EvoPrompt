@@ -6,6 +6,11 @@ This is a framework for automatically adjusting LLM prompts using evolutionary a
 ## Compatibility
 This framework runs on OpenAI-compatible servers.
 
+## Require
+   ```sh
+   pip install faiss sentense-transformers numpy openai
+   ```
+
 ## Usage
 1. Modify `config.py` to fit your environment.
 2. Run the script:
