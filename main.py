@@ -2,15 +2,11 @@ import llm
 import re
 from evaluation import evaluate
 from evolution import evolve
+from individual import individual
 import systemprompt
 import config
 import pickle
 
-class individual():
-    def __init__(self, prompt, answer, score):
-        self.prompt = prompt
-        self.answer = answer
-        self.score = score   
 
 def run(genotypes:list, expected:str, generation:int):
     result = [] 
