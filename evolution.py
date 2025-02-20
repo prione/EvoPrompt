@@ -13,8 +13,10 @@ def evolve(genotypes, scores):
     return new_genotypes
 
 def select_parents(scores):
-    weights = [s/sum(scores) for s in scores]
-    fertile_genotypes = range(len(scores))
+    alpha = 0.3
+    fertile_genotypes = np.arange(0, len(scores))
+    weights = np.exp(-alpha * fertile_genotypes)
+    weights /= weights.sum() 
     p1, p2 = np.random.choice(fertile_genotypes, size=2, replace=True, p=weights)
     
     return p1, p2
