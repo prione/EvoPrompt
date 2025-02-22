@@ -1,11 +1,10 @@
+import dill
 import llm
-import re
+import systemprompt
+import config
 from evaluation import evaluate
 from evolution import evolve
 from individual import individual
-import systemprompt
-import config
-import dill
 
 def run(genotypes:list, expected:str, generation:int):
     result = [] 
@@ -26,7 +25,7 @@ def run(genotypes:list, expected:str, generation:int):
         save(result)
         
         genotypes = evolve(genotypes, scores)
-    
+        
     return result
     
 def save(result):
@@ -35,4 +34,4 @@ def save(result):
  
 if __name__ == "__main__":
     result = run(config.initial_genotypes, config.expected_answer, config.generation)
-    
+    save(result)
