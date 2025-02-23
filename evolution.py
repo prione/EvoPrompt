@@ -34,7 +34,6 @@ def create_children(prompt1, prompt2):
 def evo_prompt(prompt1, prompt2): 
     return f"""
 Please follow the instructions based on the Genetic Algorithm step-by-step to generate better prompts in Japanese.
-However, be careful not to change the purpose of the prompt.
 Step 1. Exchange some words or sentences in the following prompts and generate two new prompts:
 #prompt1: {prompt1}
 #prompt2: {prompt2}
